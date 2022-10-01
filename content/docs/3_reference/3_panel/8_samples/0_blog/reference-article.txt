@@ -1,107 +1,438 @@
 
-Title: Blog
+<!DOCTYPE html>
+<html lang="pt-br">
 
-----
+<head>
 
-Intro: A simple blog and articles setup
+    <script>
+        var sigla_produto = "v4k";
+        var adv = "adv02-01";
+        var rede = "tab";
+        var headline = '';
+        var botao_link = "https://info.doutornature.com/sfunnel/5563/?pagina=" + adv;
+        if (headline) {
+            botao_link = botao_link + "&?hl=" + headline;
+        }
+    </script>
 
-----
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esses alimentos, ditos "saudáveis", podem estar destruindo seu intestino! (Médico Revela Tudo)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5FDW673');
+    </script>
+    <!-- End Google Tag Manager -->
+    <style>
+        body {
+            font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+            color: #545454;
+        }
 
-Text:
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            color: #364453;
+            font-weight: bold;
+        }
 
-## Blog
+        p {
+            margin: 22.5px 0;
+        }
 
-```yaml "/site/blueprints/pages/blog.yml"
-title: Blog
-icon: 📚
+        a {
+            text-decoration: underline;
+        }
 
-columns:
-  left:
-    width: 1/2
-    sections:
-      drafts:
-        extends: sections/articles
-        label: Drafts
-        status: draft
+        @media (min-width: 1200px) {
 
-      unlisted:
-        extends: sections/articles
-        label: In Review
-        status: unlisted
+            h1 {
+                font-size: 48px;
+            }
+        }
 
-  right:
-    width: 1/2
-    sections:
-      listed:
-        extends: sections/articles
-        label: Published
-        status: listed
-```
+        footer p {
+            font-size: 16px;
+            line-height: 1;
+        }
 
-### Predefined section for reusage
+        .link {
+            text-decoration: none;
+            color: #52bbe5;
+            cursor: pointer;
+        }
 
-```yaml "/site/blueprints/sections/articles.yml"
-type: pages
-label: Articles
-info: "{{ page.date.toDate('d.m.Y') }}"
-template: article
-empty: No articles yet
-sortBy: date desc
-```
+        .link:hover {
+            text-decoration: none;
+            color: #52bbe5;
+            cursor: pointer;
+        }
 
-### Result
+        .label-image {
+            background-color: #007BFF;
+            color: #FFF;
+            font-weight: 600;
+        }
 
-(image: blog.png)
+        .bg-dark {
+            background-color: #364453 !important;
+        }
+    </style>
+</head>
 
-## Single article
+<body>
 
-```yaml "/site/blueprints/pages/article.yml"
-title: Article
-num: '{{ page.date.toDate("Ymd") }}'
-icon: 📖
+    <div class="container pb-4 px-md-5">
 
-status:
-  draft:
-    label: Draft
-    text: The article is still in draft mode. It can only be seen by editors with panel access.
-  unlisted:
-    label: In Review
-    text: The article is online and can be visited with the direct URL. The team must still give the final go to publish it.
-  listed:
-    label: Published
-    text: The article is online and listed in the blog
+        <p class="text-center text-muted mt-0">
+            Advertorial
+        </p>
 
-columns:
-  main:
-    width: 2/3
-    fields:
-      text:
-        type: textarea
-        size: large
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><span class="text-muted" style="text-decoration: none;" href="#">Home</span>
+                </li>
+                <li class="breadcrumb-item"><span class="text-muted" style="text-decoration: none;" href="#">Blog</span>
+                </li>
+                <li class="breadcrumb-item active text-primary" style="text-decoration: none;" aria-current="page">
+                    Saúde e bem-estar</li>
+            </ol>
+        </nav>
 
-  sidebar:
-    width: 1/3
-    sections:
-      meta:
-        type: fields
-        fields:
-          date:
-            type: date
-            time: true
-            default: now
-          author:
-            type: users
-          tags:
-            type: tags
-```
+        <section>
+            <div class="container">
+                <div class="row">
 
-### Result
-
-(image: article.png)
-
-## Cookbook
-
-If you want to find out more about creating a Kirby-powered blog, read our (link: docs/cookbook/templating/create-a-blog text: full cookbook recipe).
+                    <div class="col-md-12 col-12">
+                        <div class="my-4">
+                            <img src="./../assets/img/logo-drnature-cinza.svg?v=0">
+                        </div>
+                        <h1 class="mt-2">Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino?</h1>
+                        <h3 class="d-block d-md-none"style="font-size:20px;">(Médico Renomado Abre o Jogo)</h3>
+                        <h3 class="d-none d-md-block">(Médico Renomado Abre o Jogo)</h3>
 
 
+                    </div>
 
+                    <div class="col-md-8 col-12">
+                        <p class="card-subtitle text-muted mt-2 mb-3">
+                            Publicado: Quinta-feira, 28 de Julho, 2022
+                        </p>
+
+                        <div class="col-12 d-flex flex-column mb-3">
+                            <img class="img-fluid" src="./../assets/img/thumbnail_02-01.jpg" height="393">
+                        </div>
+
+                        <p>
+                        Durante toda a nossa vida ouvimos que devemos comer muitas frutas, vegetais e grãos, para permanecer saudável.
+                        <p>
+                        Mas, de acordo com o Dr. Rafael Freitas - um médico Brasileiro de renome mundial - muitos destes chamados “alimentos saudáveis” que estão presentes no prato dos brasileiros, contêm uma toxina perigosa que pode estar inchando seu estômago.
+                        </p>
+                        <p>
+                        “Essa toxina desagradável provoca a abertura de micro furos na parede frágil do intestino.” diz o Dr. Rafael. Isso permite que bactérias nocivas e resíduos se infiltrem em sua corrente sanguínea e causem estragos em todo seu corpo.
+                        </p>
+                        <p>
+                            <b>Hoje, novas pesquisas mostram que esse problema no intestino é mais comum do que se imaginava e está afetando milhões de pessoas no Brasil. Os sinais de alerta comuns incluem: ganho de peso, fadiga, dificuldade de digestão, confusão mental, sonolência durante o dia, dores nas articulações e às vezes, até mesmo problemas de pele.</b>
+                        </p>
+                        <p>
+                        O Dr. Rafael explica que: “Esses problemas comuns de saúde costumam ser confundidos com o processo normal de envelhecimento. Mas posso garantir que os danos causados por essa toxina pouco conhecida está longe de ser normal.”
+                        </p>
+                        <p>
+                            A boa notícia é que <a href="">esse problema pode ser facilmente resolvido em casa.</a>
+                        </p>
+
+                        <p>
+                            <b>“É muito simples, você só precisa saber quais alimentos são realmente saudáveis e quais contêm essa toxina oculta”</b>, explica o Dr. Rafael.
+                        </p>
+                        <p>
+                            Simplesmente eliminando alimentos com essa toxina, ele viu milhares de seus próprios pacientes alcançarem resultados notáveis. (Dona Marta, uma de suas pacientes, perdeu 18 quilos em 5 meses e manteve o peso desde então)
+                        </p>
+                        <p>
+                        Depois de anos de pesquisa, o Dr. Rafael decidiu lançar <a href="">um curto vídeo explicativo ao público</a> - gratuito e sem propagandas - mostrando exatamente quais alimentos, você e sua família, devem evitar.
+                        </p>
+                        <p>
+                        “Nossa saúde é nosso maior presente”, explica ele. “Portanto, se este vídeo ajudar as pessoas a terem uma aparência saudável e a se sentirem melhor, eu ficarei muito feliz em ter ajudado.”
+                        </p>
+
+                        <p>
+                            Desde então, <a href="">o vídeo</a> tornou-se viral, primeiro sendo compartilhado por usuários no Facebook, depois sendo apresentado em sites de notícias como Bem Estar e Jovem-Pan.
+                        </p>
+                        <p>
+                        Até agora, os comentários e feedbacks tem sido encorajadores, com milhares de Brasileiros dizendo estar em sua melhor forma em décadas.
+                        </p>
+                        <p>
+                            <a href="">Clique aqui para assistir a apresentação:</a>
+                        </p>
+                        <a href="">
+                            <div class="card bg-primary rounded shadow-lg p-0 my-4 border-0">
+                                <img src="./../assets/img/cin_banana.jpeg?v=0" class="img-fluid w-100 rounded-top" alt="Assista ao vídeo">
+                                <h4 class="text-center text-white my-2">Assista ao vídeo</h4>
+                            </div>
+                        </a>
+                        <p>
+                            Agora, há uma coisa que o Dr. Rafael sempre pede aos espectadores:
+                        </p>
+                        <p>
+                            "Se as minhas orientações te ajudarem a recuperar o controle do seu peso, diminuir a sua vontade de comer besteiras, aumentar sua energia, aliviar os gases e o inchaço ou se der alívio para suas articulações doloridas… então, por favor, considere compartilhar este vídeo com seus amigos e entes queridos. Porque juntos, podemos ajudar o maior número possível de pessoas a evitar esses problemas de saúde. ”
+                        </p>
+                        <p>
+                            <a href="">Clique aqui para assistir a apresentação</a>
+                        </p>
+                        <p>
+                            <small>
+                                * os resultados individuais podem variar.
+                            </small>
+                        </p>
+                        <!-- Doctor -->
+                        <section class="pb-5 mt-4" id="doctor">
+
+                            <div class="row align-items-center">
+                                <div class="col-md-12">
+                                    <h4 class="mb-3 mb-md-4">Sobre o Dr. Rafael</h4>
+                                </div>
+                                <div class="col-sm-6 col-md-3">
+                                    <a href="">
+                                        <img src="./../assets/img/dr-rafael-freitas.png" alt="Dr. Rafael" class="img-fluid shadow-lg rounded mb-3 mb-md-0 d-block d-md-none" style="max-width: 250px">
+                                        <img src="./../assets/img/dr-rafael-freitas.png" alt="Dr. Rafael" class="img-fluid shadow-lg rounded mb-3 mb-md-0 d-none d-md-block">
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <p class="m-0" style="font-size: 17px;">
+                                        Dr. Rafael Freitas é um dos mais renomados médicos da chamada medicina natural.
+                                        Autor do livro
+                                        bestseller “Corpo Blindado”, é formado pela Universidade Federal do Paraná. Como
+                                        pesquisador é
+                                        reconhecido e respeitado por seus trabalhos científicos realizados no Canadá e
+                                        Coréia.
+                                        <a href="">Saiba mais.</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </section>
+                        <!-- Doctor -->
+
+                    </div>
+
+
+                    <div class="col-md-4 col-12 d-none d-md-block">
+                        <h4>Veja Também</h4>
+                        <a href="https://info.doutornature.com/sfunnel/5563/?hl=Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino? (Dr. Rafael Freitas Revela Tudo)&click_area=posts1" class="seemore_dn" style="text-decoration: none; color: #545454;">
+                            <div class="row border">
+                                <div class="col-4 ps-0 pe-0">
+                                    <img src="./../assets/img/veja_tbm1-0201.png" class="img-fluid">
+                                </div>
+                                <div class="col-8 d-flex align-items-center">
+                                    <p class="m-0" style="font-size: 18px;">Isto é o Que Acontece Quando Você Come Um Tomate</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://info.doutornature.com/sfunnel/5563/?hl=Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino? (Dr. Rafael Freitas Revela Tudo)&click_area=posts2" class="seemore_dn" style="text-decoration: none; color: #545454;">
+                            <div class="row border mt-5">
+                                <div class="col-4 ps-0 pe-0">
+                                    <img src="./../assets/img/veja_tbm2-0201.png" class="img-fluid">
+                                </div>
+                                <div class="col-8 d-flex align-items-center">
+                                    <p class="m-0" style="font-size: 18px;">Existe Um Alimento Que Pode Reiniciar Seu Metabolismo Lento, e Não, Não É Gengibre</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://info.doutornature.com/sfunnel/5563/?hl=Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino? (Dr. Rafael Freitas Revela Tudo)&click_area=posts3" class="seemore_dn" style="text-decoration: none; color: #545454;">
+                            <div class="row border mt-5">
+                                <div class="col-4 ps-0 pe-0">
+                                    <img src="./../assets/img/veja_tbm3-0201.png" class="img-fluid">
+                                </div>
+                                <div class="col-8 d-flex align-items-center">
+                                    <p class="m-0" style="font-size: 18px;">Médico Brasileiro: Eu Como Isso Todas as Manhãs Para Limpar Meu Intestino</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://info.doutornature.com/sfunnel/5563/?hl=Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino? (Dr. Rafael Freitas Revela Tudo)&click_area=posts4" class="seemore_dn" style="text-decoration: none; color: #545454;">
+                            <div class="row border mt-5">
+                                <div class="col-4 ps-0 pe-0">
+                                    <img src="./../assets/img/veja_tbm4-0201.png" class="img-fluid">
+                                </div>
+                                <div class="col-8 d-flex align-items-center">
+                                    <p class="m-0" style="font-size: 18px;">Por Que Este Médico Teve Que Mudar a Sua Alimentação</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <h4 class="d-block d-md-none">Veja Também</h4>
+                    <div class="col-md-4 col-12 d-block d-md-none px-0">
+                        <div class="container">
+                            <a href="https://info.doutornature.com/sfunnel/5563/?hl=Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino? (Dr. Rafael Freitas Revela Tudo)&click_area=posts1" style="text-decoration: none; color: #545454;">
+                                <div class="row border">
+                                    <div class="col-4 ps-0 pe-0">
+                                        <img src="./../assets/img/veja_tbm1-0201.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-8 d-flex align-items-center">
+                                        <p style="font-size: 15px;" class="m-0">Isto É O Que Acontece Quando Você Come Um Tomate</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://info.doutornature.com/sfunnel/5563/?hl=Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino? (Dr. Rafael Freitas Revela Tudo)&click_area=posts2" class="seemore_dn" style="text-decoration: none; color: #545454;">
+                                <div class="row border mt-5">
+                                    <div class="col-4 ps-0 pe-0">
+                                        <img src="./../assets/img/veja_tbm2-0201.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-8 d-flex align-items-center">
+                                        <p style="font-size: 15px;" class="m-0">Existe Um Alimento Que Pode Reiniciar Seu Metabolismo Lento, e Não, Não É Gengibre</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://info.doutornature.com/sfunnel/5563/?hl=Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino? (Dr. Rafael Freitas Revela Tudo)&click_area=posts3" class="seemore_dn" style="text-decoration: none; color: #545454;">
+                                <div class="row border mt-5">
+                                    <div class="col-4 ps-0 pe-0">
+                                        <img src="./../assets/img/veja_tbm3-0201.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-8 d-flex align-items-center">
+                                        <p style="font-size: 15px;" class="m-0">Médico Brasileiro: Eu Como Isso Todas as Manhãs Para Limpar Meu Intestino</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="https://info.doutornature.com/sfunnel/5563/?hl=Quais Alimentos “Saudáveis” Podem Estar Destruindo Seu Intestino? (Dr. Rafael Freitas Revela Tudo)&click_area=posts4" class="seemore_dn" style="text-decoration: none; color: #545454;">
+                                <div class="row border mt-5">
+                                    <div class="col-4 ps-0 pe-0">
+                                        <img src="./../assets/img/veja_tbm4-0201.png" class="img-fluid">
+                                    </div>
+                                    <div class="col-8 d-flex align-items-center">
+                                        <p style="font-size: 15px;" class="m-0">Por Que Este Médico Teve Que Mudar a Sua Alimentação</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white-50">
+        <div class="container px-4">
+            <div class="d-flex justify-content-center">
+
+                <p class="mb-4 mb-md-5 mt-0 " style="max-width: 760px;">
+                    <small style="font-size:12.8px">
+                        Produto Registrado M.S. 6.2907.0010. Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença, os resultados podem variar de pessoa para pessoa, esses depoimentos podem ser fictícios, esta informação não constitui aconselhamento medico e não deve ser considerada como tal, consulte o seu medico antes de modificar o seu regime médico regular. Este é um advertorial e não um artigo de notícia ou blog.
+                    </small>
+                </p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <div class="row align-items-center" style="max-width: 800px ;">
+                    <div class="col-sm-3 ps-md-0">
+                        <img src="./../../assets/img/logo.png" class="img-fluid mb-3 mb-md-0 logo" alt="Doutor Nature" style="max-width: 200px;">
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="mt-1 mb-0 text-md-right">
+                            <small style="font-size:12.8px">
+                                © 2021 Doutor Nature - Todos os Direitos Reservados -
+                                <a href="https://www.doutornature.com/politica-de-privacidade" target="_blank" class="footer_dn text-white-50">
+                                    Política de Privacidade
+                                </a> |
+                                <a href="https://www.doutornature.com/termos-de-uso" target="_blank" class="footer_dn text-white-50">
+                                    Termos de Uso
+                                </a>
+                            </small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var els = document.querySelectorAll('a');
+            els.forEach(function(element) {
+                if (!element.classList.contains("footer_dn")) {
+                    if (!element.classList.contains("seemore_dn")) {
+                        element.href = botao_link + '&click_area='+element.innerText.replace(/[^a-zA-Z\s]/g, "").replace(/ /g, "").toLowerCase();
+                    }
+                }
+            })
+        })
+
+        function getParameterByName(name) {
+            var url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        function dn_createCookie(name, value, days) {
+            var expires;
+
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/;domain=." + window.location.hostname;
+
+        }
+
+        function dn_readCookie(name) {
+            var nameEQ = encodeURIComponent(name) + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ')
+                    c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0)
+                    return decodeURIComponent(c.substring(nameEQ.length, c.length));
+            }
+            return null;
+        }
+
+        function dn_eraseCookie(name) {
+            createCookie(name, "", -1);
+        }
+
+        pub = getParameterByName('tb_publisher');
+        //      pub = "site";  //F: 05-05 09:00
+
+        if (pub && pub.indexOf("site") == -1) {
+            modo = "F";
+        } else {
+            modo = "A";
+            // dn_createCookie("dn_aaox_tb_vsl_btn", "S", "60");
+        }
+        console.log("adv: " + modo);
+    </script>
+</body>
+
+</html>
