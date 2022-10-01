@@ -1,0 +1,21 @@
+Title: Google Translate
+
+----
+
+Download: https://owebstudio.com/kirby/plugins/google-translate
+
+----
+
+Version: 1.0.0
+
+----
+
+Category: i18n
+
+----
+
+Subcategory: integration
+
+----
+
+Description: Google Translate integration for Kirby 3.
